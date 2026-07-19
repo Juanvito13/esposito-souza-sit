@@ -84,3 +84,82 @@ transition:.3s;
 .botao:hover{
 background:#b99224;
 }
+section{
+padding:80px 0;
+}
+
+section h2{
+text-align:center;
+font-size:34px;
+margin-bottom:40px;
+color:#0b1f3a;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#0b1f3a;
+margin-bottom:15px;
+}
+
+#contato{
+background:#0b1f3a;
+color:#fff;
+text-align:center;
+}
+
+#contato h2{
+color:#d4af37;
+}
+
+#contato p{
+margin:15px 0;
+}
+
+footer{
+background:#08162b;
+color:#fff;
+text-align:center;
+padding:30px 15px;
+}
+
+@media(max-width:768px){
+
+header .container{
+flex-direction:column;
+}
+
+nav{
+margin-top:20px;
+}
+
+nav a{
+display:block;
+margin:10px 0;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+}
