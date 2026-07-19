@@ -1,165 +1,335 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background:#f8f8f8;
-color:#333;
-line-height:1.6;
+    font-family:'Poppins', sans-serif;
+    background:#f8f8f8;
+    color:#333;
 }
 
 .container{
-width:90%;
-max-width:1200px;
-margin:auto;
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
+/* CABEÇALHO */
+
 header{
-background:#0b1f3a;
-padding:20px 0;
-position:sticky;
-top:0;
-z-index:999;
+    background:#0b1f3a;
+    padding:20px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.2);
 }
 
 header .container{
-display:flex;
-justify-content:space-between;
-align-items:center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .logo h2{
-color:#d4af37;
-font-size:28px;
+    color:#d4af37;
+    font-size:28px;
+    font-weight:700;
 }
 
-.logo p{
-color:#fff;
-font-size:14px;
+.logo span{
+    color:#fff;
+    font-size:14px;
 }
 
 nav a{
-color:#fff;
-text-decoration:none;
-margin-left:20px;
-font-weight:500;
-transition:.3s;
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:16px;
+    transition:.3s;
 }
 
 nav a:hover{
-color:#d4af37;
+    color:#d4af37;
 }
+
+
+/* BANNER PRINCIPAL */
 
 .hero{
-background:linear-gradient(rgba(11,31,58,.85),rgba(11,31,58,.85));
-padding:120px 20px;
-text-align:center;
-color:#fff;
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(
+    rgba(11,31,58,.85),
+    rgba(11,31,58,.85)
+    ),
+    url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f")
+    center/cover;
 }
+
 
 .hero h1{
-font-size:42px;
-margin-bottom:20px;
+    font-size:45px;
+    max-width:900px;
+    margin:auto;
+    margin-bottom:25px;
 }
+
 
 .hero p{
-font-size:20px;
-margin-bottom:30px;
+    font-size:20px;
+    margin-bottom:35px;
 }
 
-.botao{
-display:inline-block;
-background:#d4af37;
-color:#0b1f3a;
-padding:15px 35px;
-border-radius:6px;
-font-weight:bold;
-text-decoration:none;
-transition:.3s;
+
+.btn{
+    display:inline-block;
+    background:#d4af37;
+    color:#0b1f3a;
+    padding:15px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
 }
 
-.botao:hover{
-background:#b99224;
+
+.btn:hover{
+    transform:translateY(-5px);
+    background:#f1c94b;
 }
+/* SEÇÕES */
+
 section{
-padding:80px 0;
+    padding:80px 0;
 }
+
 
 section h2{
-text-align:center;
-font-size:34px;
-margin-bottom:40px;
-color:#0b1f3a;
+    text-align:center;
+    color:#0b1f3a;
+    font-size:36px;
+    margin-bottom:40px;
 }
+
+
+/* SOBRE */
+
+#sobre p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+}
+
+
+/* ÁREAS DE ATUAÇÃO */
 
 .cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
 }
+
 
 .card{
-background:#fff;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-transition:.3s;
+    background:white;
+    padding:35px 25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border-top:4px solid #d4af37;
+    transition:.3s;
 }
+
 
 .card:hover{
-transform:translateY(-8px);
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
 }
+
 
 .card h3{
-color:#0b1f3a;
-margin-bottom:15px;
+    color:#0b1f3a;
+    margin-bottom:15px;
+    font-size:22px;
 }
+
+
+.card p{
+    line-height:1.7;
+}
+
+
+/* CONTATO */
 
 #contato{
-background:#0b1f3a;
-color:#fff;
-text-align:center;
+    background:#0b1f3a;
+    color:white;
+    text-align:center;
 }
+
 
 #contato h2{
-color:#d4af37;
+    color:#d4af37;
 }
+
 
 #contato p{
-margin:15px 0;
+    font-size:18px;
+    margin:15px 0;
 }
 
+
+/* RODAPÉ */
+
 footer{
-background:#08162b;
-color:#fff;
-text-align:center;
-padding:30px 15px;
+    background:#071426;
+    color:white;
+    text-align:center;
+    padding:30px 10px;
 }
+
+
+footer p{
+    margin:8px;
+}
+/* ANIMAÇÕES */
+
+.card,
+.btn,
+nav a{
+    transition:all .3s ease;
+}
+
+
+/* ENTRADA SUAVE */
+
+.hero .container{
+    animation:aparecer 1.2s ease;
+}
+
+
+@keyframes aparecer{
+
+from{
+    opacity:0;
+    transform:translateY(30px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+
+/* RESPONSIVIDADE PARA CELULAR */
 
 @media(max-width:768px){
 
 header .container{
-flex-direction:column;
+
+    flex-direction:column;
+
+    text-align:center;
+
 }
+
+
+.logo h2{
+
+    font-size:24px;
+
+}
+
 
 nav{
-margin-top:20px;
+
+    margin-top:20px;
+
 }
+
 
 nav a{
-display:block;
-margin:10px 0;
+
+    display:inline-block;
+
+    margin:8px;
+
 }
+
+
+.hero{
+
+    min-height:70vh;
+
+}
+
 
 .hero h1{
-font-size:30px;
+
+    font-size:30px;
+
 }
 
+
 .hero p{
-font-size:18px;
+
+    font-size:17px;
+
 }
+
+
+section{
+
+    padding:50px 0;
+
+}
+
+
+section h2{
+
+    font-size:28px;
+
+}
+
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.card{
+
+    padding:25px 20px;
+
+}
+
+
+}
+
+
+/* MELHORIA DE TEXTO */
+
+strong{
+
+    color:#d4af37;
 
 }
