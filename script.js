@@ -1,17 +1,34 @@
-// Rolagem suave para os links do menu
+// Navegação suave pelo menu
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
 
-    const destino = document.querySelector(this.getAttribute('href'));
+    link.addEventListener('click', function(event){
 
-    if (destino) {
-      destino.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  });
+        event.preventDefault();
+
+        const destino = document.querySelector(
+            this.getAttribute('href')
+        );
+
+        if(destino){
+
+            destino.scrollIntoView({
+                behavior:'smooth'
+            });
+
+        }
+
+    });
+
 });
 
-// Mensagem no console
-console.log("Site Esposito & Souza carregado com sucesso!");
+
+// Mensagem de carregamento
+
+window.addEventListener("load", () => {
+
+    console.log(
+        "Esposito & Souza Advogados Associados - Site carregado."
+    );
+
+});
